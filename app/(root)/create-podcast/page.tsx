@@ -36,6 +36,8 @@ import { api } from "@/convex/_generated/api"
 import { useRouter } from "next/navigation"
 import GeneratePodcast from "@/components/GeneratePodcast"
 import GenerateThumbnail from "@/components/GenerateThumbnail"
+import { useToast } from "@/components/ui/use-toast"
+import { createPodcast } from "@/convex/podcasts"
 
 const voiceCategories = ['alloy', 'shimmer', 'nova', 'echo', 'fable', 'onyx'];
 
@@ -59,9 +61,9 @@ const CreatePodcast = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  //const createPodcast = useMutation(api.podcasts.createPodcast)
+  const createPodcast = useMutation(api.podcasts.createPodcast)
 
-  //const { toast } = useToast()
+  const { toast } = useToast()
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -75,36 +77,36 @@ const CreatePodcast = () => {
     try {
       setIsSubmitting(true);
       if(!audioUrl || !imageUrl || !voiceType) {
-        // toast({
-        //   title: 'Please generate audio and image',
-        // })
+         toast({
+           title: 'Please generate audio and image',
+         })
         setIsSubmitting(false);
         throw new Error('Please generate audio and image')
       }
 
-      // const podcast = await createPodcast({
-      //   podcastTitle: data.podcastTitle,
-      //   podcastDescription: data.podcastDescription,
-      //   audioUrl,
-      //   imageUrl,
-      //   voiceType,
-      //   imagePrompt,
-      //   voicePrompt,
-      //   views: 0,
-      //   audioDuration,
-      //   audioStorageId: audioStorageId!,
-      //   imageStorageId: imageStorageId!,
-      // })
-      //  toast({ title: 'Podcast created' })
-      // setIsSubmitting(false);
-      // router.push('/')
+       const podcast = await createPodcast({
+         podcastTitle: data.podcastTitle,
+         podcastDescription: data.podcastDescription,
+         audioUrl,
+         imageUrl,
+         voiceType,
+         imagePrompt,
+         voicePrompt,
+         views: 0,
+         audioDuration,
+         audioStorageId: audioStorageId!,
+         imageStorageId: imageStorageId!,
+       })
+        toast({ title: 'Podcast created' })
+       setIsSubmitting(false);
+       router.push('/')
     } catch (error) {
       console.log(error);
-      //  toast({
-      //    title: 'Error',
-      //    variant: 'destructive',
-      //  })
-      // setIsSubmitting(false);
+       toast({
+          title: 'Error',
+          variant: 'destructive',
+        })
+       setIsSubmitting(false);
     }
   }
 
