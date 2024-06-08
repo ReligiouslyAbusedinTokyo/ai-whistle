@@ -148,3 +148,60 @@ export const sidebarLinks = [
         "/altp8.jpg",
     },
   ];
+
+  export const products = [
+    {
+      title: "How to begin podcast",
+      link: 'https://gomoonbeam.com',
+      thumbnail: "/altp2.jpg",
+    },
+    {
+      title: 'Cursor',
+      link: 'https://cursor.so',
+      thumbnail: "/altp3.jpg",
+    },
+    {
+      title: 'Rogue',
+      link: 'https://userogue.com',
+      thumbnail: "/altp4.jpg",
+    },
+  
+    {
+      title: 'Editorially',
+      link: 'https://editorially.org',
+      thumbnail: "/altp5.jpg",
+    },
+    {
+      title: 'Editrix AI',
+      link: 'https://editrix.ai',
+      thumbnail:  "/altp6.jpg",
+    },
+    {
+      title: 'Pixel Perfect',
+      link: 'https://app.pixelperfect.quest',
+      thumbnail: '/altp7.jpg',
+    },
+  
+    {
+      title: 'Algochurn',
+      link: 'https://algochurn.com',
+      thumbnail: '/altp8.jpg',
+    },
+    {
+      title: 'Aceternity UI',
+      link: 'https://ui.aceternity.com',
+      thumbnail: '/altp1.jpg',
+    },
+    {
+      title: 'Tailwind Master Kit',
+      link: 'https://tailwindmasterkit.com',
+      thumbnail: '/altp9.jpg',
+    },
+    {
+      title: 'SmartBridge',
+      link: 'https://smartbridgetech.com',
+      thumbnail: '/altp10.jpg',
+    },
+   
+   
+  ]

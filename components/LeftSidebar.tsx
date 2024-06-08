@@ -16,9 +16,7 @@ const router = useRouter()
     <section className="left_sidebar">
         <nav className='flex flex-col gap-6'>
              <Link href="/" className="flex cursor-pointer items-center gap-1 pb-10 max-lg:justify-center">
-                <Image src="/logo.png" alt="logo"
-                width={40} height={40}
-                />
+               
                 <h1 className="text-15 font-extrabold
                 max-lg:hidden text-white-1">AI Whistleblower</h1>
              </Link>

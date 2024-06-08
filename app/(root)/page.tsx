@@ -1,18 +1,22 @@
 "use client";
 import React from 'react'
 
- import { podcastDataAlternative } from '@/constants'
+ import { products } from '@/constants'
 import Podcastcard from '@/components/PodcastCard';
 
 
 
  import { useQuery } from "convex/react";
  import { api } from "@/convex/_generated/api";
+import { HeroParallax } from '@/components/ConnectParallex';
+
+
+
 
 
 const Home = () => {
 
-  console.log(podcastDataAlternative)
+  
   {/* from convex */}
  // const tasks = useQuery(api.tasks.get);
 
@@ -23,7 +27,13 @@ const Home = () => {
       <section className='flex flex-col gap-6'>
          <h1 className="text-18 font-bold text-white-1">Trendin Podcast</h1>
         
+        <section>
+          <HeroParallax products={products}></HeroParallax>
+          <div className="text-18 font-bold mt-5 text-white-1">Trending Podcasts </div>
+        </section>
+
          <div className="podcast_grid">
+         
             {/* // TO DO this needs to be connect with convex db after taking open ai secret key   */}
             {getTrendingPodcasts?.map(({_id, podcastTitle, podcastDescription, imageUrl})=>(
             <Podcastcard
@@ -32,6 +42,7 @@ const Home = () => {
             title={podcastTitle}
             description={podcastDescription}
             podcastId={_id}
+           
             />
           ))}  
           </div>
