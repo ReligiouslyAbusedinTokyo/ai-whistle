@@ -20,7 +20,11 @@ const nextConfig = {
         {
           protocol:'https',
           hostname: 'unique-ptarmigan-787.convex.cloud'
-        }
+        },
+        {
+          protocol: 'https',
+          hostname: 'firebasestorage.googleapis.com',
+        },
       ]
     }
   };

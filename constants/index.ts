@@ -101,3 +101,50 @@ export const sidebarLinks = [
         "https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e",
     },
   ];
+
+  export const podcastDataAlternative = [
+   
+    {
+      id: 1,
+      title: "How to begin podcast",
+      description: "This is how the news should sound",
+      imgURL:"/altp2.jpg",
+    },
+    {
+      id: 2,
+      title: "Derivative News",
+      description: "Call and Option Strategies",
+      imgURL:"/altp3.jpg",
+    },
+    {
+      id: 3,
+      title: "The Stewart Show",
+      description: "This is how the news should sound",
+      imgURL:"/altp4.jpg",
+    },
+    {
+      id: 4,
+      title: "Beyond Clean",
+      description: "The Sterile Processing Podcast",
+      imgURL:"/altp5.jpg",
+    },
+    {
+      id: 5,
+      title: "Car Show",
+      description: "Anything about car",
+      imgURL:"/altp6.jpg",
+    },
+    {
+      id: 6,
+      title: "Talk together podcast",
+      description: "Talk togther",
+      imgURL:"/altp7.jpg",
+    },
+    {
+      id: 7,
+      title: "AI and Law",
+      description: "How we change the law for AI era",
+      imgURL:
+        "/altp8.jpg",
+    },
+  ];
