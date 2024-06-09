@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { SpeechCreateParams } from "openai/resources/audio/speech.mjs";
-import ConvexClerkProvider from "./providers/ConvexClerkProvider";
+import ConvexClerkProvider from "@/providers/ConvexClerkProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 

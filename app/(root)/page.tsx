@@ -15,7 +15,6 @@ import { HeroParallax } from '@/components/ConnectParallex';
 
 
 const Home = () => {
-
   
   {/* from convex */}
  // const tasks = useQuery(api.tasks.get);
@@ -25,7 +24,7 @@ const Home = () => {
   return (
     <div className="mt-9 flex flex-col gap-6">
       <section className='flex flex-col gap-6'>
-         <h1 className="text-18 font-bold text-white-1">Trendin Podcast</h1>
+        
         
         <section>
           <HeroParallax products={products}></HeroParallax>

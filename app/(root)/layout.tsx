@@ -32,7 +32,7 @@ export default function RootLayout({
             </section>
 
 
-          <RightSidebar/>
+          <RightSidebar/> 
             
            
         </main>
